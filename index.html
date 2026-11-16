@@ -30,6 +30,19 @@
 
   <!-- Custom Styles for Theme & Animations -->
   <style>
+    /* ==========================================================================
+       BẢNG MÀU TÙY CHỈNH NHANH (BẠN ĐỔI MÃ MÀU HEX TẠI ĐÂY)
+       ========================================================================== */
+    .custom-title-text {
+      color: #ffffff !important; /* Màu chữ: TRUNG TÂM DỊCH VỤ KHÁCH HÀNG JUN88 */
+    }
+    .custom-pc-label {
+      color: #e0f2fe !important; /* Màu chữ: MÁY TÍNH (PC) */
+    }
+    .custom-pc-link {
+      color: #ffffff !important; /* Màu chữ: Jun88VIP.COM */
+    }
+
     body {
       font-family: 'Inter', sans-serif;
       background-color: #f0f9ff;
@@ -91,17 +104,14 @@
         <a href="https://jun8801.com" target="_blank" rel="nofollow" class="md:hidden bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 p-2.5 rounded-xl transition shadow-md flex items-center justify-center" aria-label="Trang chủ">
           <i class="fa-solid fa-house text-white text-lg"></i>
         </a>
-        <!-- Brand Logo (Recreated with high quality SVG / Image fallback) -->
-        <div class="flex items-center gap-3 group cursor-pointer">
-          <div class="relative w-14 h-14 md:w-20 md:h-20 flex items-center justify-center bg-gradient-to-tr from-sky-500 via-blue-500 to-cyan-400 rounded-2xl shadow-lg shadow-sky-400/40 border-2 border-white transform group-hover:scale-105 transition duration-300">
-            <span class="text-3xl md:text-5xl font-black text-white italic tracking-tighter drop-shadow">J</span>
-            <div class="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-400 rounded-full border-2 border-white animate-pulse"></div>
-          </div>
-          <div class="flex flex-col">
-            <span class="text-2xl md:text-4xl font-black tracking-wider bg-gradient-to-r from-blue-800 via-sky-700 to-blue-600 bg-clip-text text-transparent drop-shadow-sm">JUN88</span>
-            <span class="text-[10px] md:text-xs font-extrabold tracking-widest text-sky-800 uppercase">Official Support Center</span>
-          </div>
-        </div>
+        <a href="https://jun8801.com" target="_blank" rel="nofollow" class="inline-flex items-center group focus:outline-none" aria-label="Trang chủ Jun88">
+          <img 
+            src="/images/jun88-logo-3.png" 
+            alt="Logo Chính Thức Jun88" 
+            class="h-14 sm:h-16 md:h-20 w-auto max-w-[200px] sm:max-w-[240px] object-contain drop-shadow-md transform group-hover:scale-105 transition duration-300"
+            onerror="this.onerror=null; this.src='/images/jun88-logo-3.png';"
+          />
+        </a>
       </div>
 
       <!-- Quick Contact Header Bar (Desktop & Mobile) -->
@@ -131,7 +141,7 @@
     <!-- Center Title Banner -->
     <div class="text-center mb-8">
       <div class="inline-block bg-gradient-to-r from-sky-500 via-blue-600 to-cyan-500 border-2 border-white px-7 py-3.5 rounded-2xl shadow-xl shadow-sky-400/30">
-        <h1 class="text-lg sm:text-xl md:text-3xl font-black tracking-wider text-white uppercase flex items-center justify-center gap-3 drop-shadow">
+        <h1 class="custom-title-text text-lg sm:text-xl md:text-3xl font-black tracking-wider uppercase flex items-center justify-center gap-3 drop-shadow">
           <i class="fa-solid fa-headset text-sky-100 animate-bounce"></i>
           TRUNG TÂM DỊCH VỤ KHÁCH HÀNG JUN88
         </h1>
@@ -151,10 +161,10 @@
           <!-- Endorser & Strategic Partner Image Container -->
           <div class="w-full flex items-center justify-center overflow-hidden rounded-xl mb-4 relative z-10 bg-gradient-to-tr from-sky-50 to-white p-2 border border-sky-100">
             <img 
-              src="/images/dai-su-jun88.webp" 
+              src="https://img.alltocon.com/img/static/jun88/endorser/h5-leftside-vi-vn.png" 
               alt="Đối Tác Chiến Lược và Đại Sứ Thương Hiệu Jun88" 
               class="w-full max-w-md h-auto object-contain rounded-xl transform group-hover:scale-[1.02] transition duration-500 drop-shadow-md"
-              onerror="this.onerror=null; this.src='https://placehold.co/600x360/0ea5e9/ffffff?text=Jun88+Official+Ambassador+%26+Partner';"
+              onerror="this.onerror=null; this.src='/images/dai-su-jun88.webp';"
             />
           </div>
 
@@ -185,11 +195,11 @@
           <div class="bg-sky-50 rounded-xl p-4 border border-sky-200 mb-4 relative overflow-hidden">
             <p class="text-xs font-extrabold text-sky-900 mb-3 uppercase tracking-wide">🔗 Cổng truy cập không bị chặn:</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <a href="https://productfeedtool.nl/" target="_blank" rel="nofollow" class="bg-gradient-to-r from-sky-600 to-blue-700 hover:from-sky-500 hover:to-blue-600 p-3 rounded-xl text-white font-bold text-sm flex items-center gap-3 shadow-md shadow-sky-600/25 transition transform hover:scale-[1.02]">
+              <a href="https://Jun88VIP.COM" target="_blank" rel="nofollow" class="bg-gradient-to-r from-sky-600 to-blue-700 hover:from-sky-500 hover:to-blue-600 p-3 rounded-xl font-bold text-sm flex items-center gap-3 shadow-md shadow-sky-600/25 transition transform hover:scale-[1.02]">
                 <i class="fa-solid fa-desktop text-white text-lg"></i>
                 <div class="flex flex-col">
-                  <span class="text-[10px] text-sky-100 font-semibold uppercase">Máy tính (PC)</span>
-                  <span class="font-extrabold tracking-wide">Jun88VIP.COM</span>
+                  <span class="custom-pc-label text-[10px] font-semibold uppercase">Máy tính (PC)</span>
+                  <span class="custom-pc-link font-extrabold tracking-wide">Jun88VIP.COM</span>
                 </div>
               </a>
               <a href="https://Jun88M.COM" target="_blank" rel="nofollow" class="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 p-3 rounded-xl text-white font-bold text-sm flex items-center gap-3 shadow-md shadow-cyan-600/25 transition transform hover:scale-[1.02]">
@@ -215,15 +225,15 @@
             <span class="text-sm font-black text-slate-900 uppercase">CÁC ĐƯỜNG TRUYỀN TỐC ĐỘ CAO</span>
           </div>
           <div class="grid grid-cols-3 gap-3">
-            <a href="https://productfeedtool.nl/" target="_blank" rel="nofollow" class="bg-sky-50/80 hover:bg-sky-600 text-slate-900 hover:text-white border border-sky-200 hover:border-sky-600 p-3 rounded-xl text-center font-extrabold text-xs transition duration-200 flex flex-col items-center gap-1 shadow-sm group">
+            <a href="https://Jun88VIP.COM" target="_blank" rel="nofollow" class="bg-sky-50/80 hover:bg-sky-600 text-slate-900 hover:text-white border border-sky-200 hover:border-sky-600 p-3 rounded-xl text-center font-extrabold text-xs transition duration-200 flex flex-col items-center gap-1 shadow-sm group">
               <i class="fa-solid fa-bolt text-amber-500 group-hover:text-amber-200"></i>
               <span>Link 01</span>
             </a>
-            <a href="https://productfeedtool.nl/" target="_blank" rel="nofollow" class="bg-sky-50/80 hover:bg-sky-600 text-slate-900 hover:text-white border border-sky-200 hover:border-sky-600 p-3 rounded-xl text-center font-extrabold text-xs transition duration-200 flex flex-col items-center gap-1 shadow-sm group">
+            <a href="https://Jun88VIP.COM" target="_blank" rel="nofollow" class="bg-sky-50/80 hover:bg-sky-600 text-slate-900 hover:text-white border border-sky-200 hover:border-sky-600 p-3 rounded-xl text-center font-extrabold text-xs transition duration-200 flex flex-col items-center gap-1 shadow-sm group">
               <i class="fa-solid fa-bolt text-amber-500 group-hover:text-amber-200"></i>
               <span>Link 02</span>
             </a>
-            <a href="https://productfeedtool.nl/" target="_blank" rel="nofollow" class="bg-sky-50/80 hover:bg-sky-600 text-slate-900 hover:text-white border border-sky-200 hover:border-sky-600 p-3 rounded-xl text-center font-extrabold text-xs transition duration-200 flex flex-col items-center gap-1 shadow-sm group">
+            <a href="https://Jun88VIP.COM" target="_blank" rel="nofollow" class="bg-sky-50/80 hover:bg-sky-600 text-slate-900 hover:text-white border border-sky-200 hover:border-sky-600 p-3 rounded-xl text-center font-extrabold text-xs transition duration-200 flex flex-col items-center gap-1 shadow-sm group">
               <i class="fa-solid fa-bolt text-amber-500 group-hover:text-amber-200"></i>
               <span>Link 03</span>
             </a>
