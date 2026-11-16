@@ -1,428 +1,463 @@
-<!doctype html>
-<html lang="vi">
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#087bd7">
-  <meta name="robots" content="index,follow">
-  <title>Trung Tâm Hỗ Trợ Jun88 | Link Truy Cập & Dịch Vụ Khách Hàng</title>
-  <meta name="description" content="Trung tâm hỗ trợ Jun88: tổng hợp các kênh liên hệ, đường dẫn truy cập và danh mục dịch vụ khách hàng.">
-  <!-- Thay URL bên dưới bằng URL chính thức khi triển khai -->
-  <link rel="canonical" href="https://YOUR-DOMAIN.example/">
-  <link rel="icon" type="image/png" href="./assets/logo-jun88.png">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Trung Tâm Hỗ Trợ Jun88">
-  <meta property="og:description" content="Các kênh liên hệ và dịch vụ khách hàng Jun88.">
-  <meta property="og:image" content="./assets/logo-jun88.png">
-  <meta name="color-scheme" content="light">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Trang chủ chính thức Trung Tâm Dịch Vụ Khách Hàng Jun88. Hỗ trợ nạp rút, khuyến mãi, tài khoản 24/7 và các đường link truy cập chính thức tốc độ cao." />
+  <meta name="keywords" content="Jun88, Chăm sóc khách hàng Jun88, Link Jun88, Nạp rút Jun88, Khuyến mãi Jun88" />
+  <meta name="robots" content="index, follow" />
+  <title>Kênh Chăm Sóc Khách Hàng Chính Thức Jun88</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="https://placehold.co/64x64/0284c7/ffffff?text=J88" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- jQuery & jQuery UI for Draggable Popup -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+
+  <!-- Custom Styles for Theme & Animations -->
   <style>
-    :root {
-      --blue-950:#063b70; --blue-900:#07549b; --blue-800:#0868b9;
-      --blue-700:#087bd7; --blue-600:#1597ed; --blue-500:#36b7ff;
-      --blue-100:#e8f6ff; --blue-050:#f4fbff; --ink:#12324d;
-      --muted:#58738a; --white:#fff; --gold:#ffd978;
-      --shadow:0 14px 38px rgba(3,65,119,.15);
-      --radius:18px;
-    }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
     body {
-      margin:0; min-width:320px; color:var(--ink);
-      font-family:Inter,Roboto,"Segoe UI",Arial,sans-serif;
-      background:
-        radial-gradient(ellipse at 12% 10%,rgba(71,190,255,.20),transparent 32%),
-        radial-gradient(ellipse at 90% 70%,rgba(0,112,211,.12),transparent 34%),
-        linear-gradient(145deg,#eaf8ff 0%,#f8fcff 48%,#e8f5ff 100%);
-    }
-    a { color:inherit; text-decoration:none; }
-    img { display:block; max-width:100%; }
-    button { font:inherit; }
-    .site-shell { width:min(1440px,100%); margin-inline:auto; padding:24px clamp(14px,3vw,42px) 42px; }
-    .brand-header { display:flex; justify-content:center; align-items:center; padding:4px 0 22px; }
-    .brand-logo { width:min(235px,48vw); height:auto; filter:drop-shadow(0 8px 10px rgba(0,72,145,.16)); }
-    .layout { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:26px; align-items:start; }
-    .panel {
-      position:relative; overflow:hidden; border:1px solid rgba(20,139,220,.18);
-      border-radius:24px; background:rgba(255,255,255,.88); box-shadow:var(--shadow);
-      padding:clamp(18px,2.5vw,30px);
-    }
-    .panel::before { content:""; position:absolute; inset:0 0 auto; height:5px; background:linear-gradient(90deg,var(--blue-950),var(--blue-500),#a9e9ff); }
-    .eyebrow { display:inline-flex; align-items:center; gap:8px; margin:0 0 10px; color:var(--blue-800); font-size:.78rem; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
-    .eyebrow::before { content:""; width:22px; height:3px; border-radius:9px; background:var(--blue-500); }
-    h1,h2,h3,p { margin-top:0; }
-    h1 { margin-bottom:9px; color:var(--blue-950); font-size:clamp(1.65rem,3vw,2.45rem); line-height:1.12; letter-spacing:-.035em; }
-    h2 { margin-bottom:14px; color:var(--blue-950); font-size:1.15rem; }
-    .intro { max-width:58ch; margin-bottom:22px; color:var(--muted); line-height:1.65; }
-    .access-card {
-      position:relative; margin:18px 0; padding:20px; overflow:hidden;
-      border:1px solid rgba(255,255,255,.5); border-radius:18px;
-      color:#fff; background:linear-gradient(125deg,#064b91,#087bd7 56%,#31b8f5);
-      box-shadow:0 12px 25px rgba(5,104,184,.22);
-    }
-    .access-card::after { content:"J"; position:absolute; right:15px; bottom:-56px; color:rgba(255,255,255,.10); font-size:190px; font-weight:900; line-height:1; transform:rotate(-12deg); pointer-events:none; }
-    .access-title { position:relative; z-index:1; margin:0 0 6px; font-size:1.02rem; font-weight:900; letter-spacing:.04em; }
-    .access-note { position:relative; z-index:1; margin:0 0 16px; color:#e5f6ff; font-size:.86rem; line-height:1.5; }
-    .access-links { position:relative; z-index:1; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
-    .access-link {
-      display:flex; align-items:center; gap:9px; min-height:48px; padding:10px 13px;
-      border:1px solid rgba(255,255,255,.45); border-radius:12px;
-      background:rgba(255,255,255,.14); color:#fff; font-size:.88rem; font-weight:800;
-      transition:transform .2s,background .2s,border-color .2s;
-    }
-    .access-link:hover { transform:translateY(-2px); background:rgba(255,255,255,.25); border-color:#fff; }
-    .check { display:grid; place-items:center; flex:0 0 23px; width:23px; height:23px; border-radius:50%; color:var(--blue-800); background:#fff; font-size:.82rem; }
-    .warning { position:relative; z-index:1; margin:14px 0 0; color:#fff4d2; font-size:.78rem; font-weight:700; line-height:1.5; }
-    .speed-area { margin-top:22px; }
-    .speed-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
-    .speed-link { display:grid; place-items:center; min-height:68px; padding:12px 8px; border:1px solid #c8e9fb; border-radius:13px; color:var(--blue-800); background:linear-gradient(180deg,#fff,#edf9ff); font-weight:800; font-size:.84rem; text-align:center; transition:.2s; }
-    .speed-link:hover { border-color:var(--blue-500); transform:translateY(-2px); box-shadow:0 8px 18px rgba(0,117,202,.1); }
-    .feature-strip { display:flex; align-items:center; gap:14px; margin-top:22px; padding:15px; border-radius:15px; background:linear-gradient(100deg,#e8f7ff,#f7fcff); }
-    .feature-mark { display:grid; flex:0 0 48px; width:48px; height:48px; place-items:center; border-radius:14px; color:white; background:linear-gradient(140deg,var(--blue-800),var(--blue-500)); font-size:1.35rem; font-weight:900; }
-    .feature-strip strong { display:block; margin-bottom:3px; color:var(--blue-950); }
-    .feature-strip span { color:var(--muted); font-size:.84rem; line-height:1.4; }
-    .contact-bar { display:flex; flex-wrap:wrap; gap:10px 18px; margin-bottom:20px; padding:12px 14px; border-radius:13px; background:var(--blue-050); }
-    .contact-item { display:inline-flex; align-items:center; gap:8px; color:var(--blue-900); font-size:.88rem; font-weight:750; }
-    .contact-icon { display:grid; width:29px; height:29px; place-items:center; border-radius:9px; color:#fff; background:var(--blue-700); }
-    .service-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:11px; }
-    .service-btn {
-      display:flex; min-height:112px; flex-direction:column; justify-content:center; align-items:center; gap:9px;
-      padding:12px 7px; border:1px solid #cceafa; border-radius:15px;
-      color:var(--blue-950); background:linear-gradient(160deg,#fff,#eef9ff);
-      text-align:center; cursor:pointer; transition:transform .2s,box-shadow .2s,border-color .2s;
-    }
-    .service-btn:hover { transform:translateY(-3px); border-color:#63c5f6; box-shadow:0 10px 20px rgba(4,112,190,.12); }
-    .service-icon { display:grid; width:45px; height:45px; place-items:center; border-radius:14px; color:white; background:linear-gradient(145deg,var(--blue-900),var(--blue-500)); box-shadow:0 6px 13px rgba(0,105,185,.2); font-size:1.3rem; font-weight:900; }
-    .service-label { font-size:.75rem; font-weight:900; line-height:1.3; letter-spacing:.015em; }
-    .group-section { margin-top:24px; }
-    .group-heading { display:flex; align-items:center; gap:10px; margin-bottom:12px; color:var(--blue-950); font-size:1rem; font-weight:900; }
-    .group-heading::before { content:""; width:5px; height:21px; border-radius:8px; background:linear-gradient(var(--blue-800),var(--blue-500)); }
-    .tile-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; }
-    .tile {
-      display:flex; min-height:94px; flex-direction:column; align-items:center; justify-content:center; gap:8px;
-      padding:12px 6px; border:1px solid #d6edf9; border-radius:13px; background:#fff;
-      color:var(--blue-900); text-align:center; transition:.2s;
-    }
-    .tile:hover { transform:translateY(-2px); border-color:var(--blue-500); box-shadow:0 8px 16px rgba(0,112,190,.1); }
-    .tile-icon { font-size:1.45rem; line-height:1; }
-    .tile span:last-child { font-size:.72rem; font-weight:850; }
-    .site-footer { padding:24px 10px 0; color:#55758e; font-size:.78rem; line-height:1.6; text-align:center; }
-    .site-footer strong { color:var(--blue-900); }
-    .modal-backdrop { position:fixed; inset:0; z-index:1000; display:none; place-items:center; padding:16px; background:rgba(3,27,48,.72); }
-    .modal-backdrop.is-open { display:grid; }
-    .service-modal { display:flex; width:min(900px,100%); height:min(720px,88vh); flex-direction:column; overflow:hidden; border-radius:18px; background:#fff; box-shadow:0 25px 70px rgba(0,0,0,.35); }
-    .modal-head { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:13px 16px; color:#fff; background:linear-gradient(100deg,var(--blue-950),var(--blue-600)); }
-    .modal-head h2 { margin:0; color:#fff; font-size:1rem; }
-    .modal-close { width:36px; height:36px; border:0; border-radius:10px; color:var(--blue-950); background:#fff; font-size:1.35rem; cursor:pointer; }
-    .modal-frame { width:100%; flex:1; border:0; background:#f5fbff; }
-    .notice { position:fixed; z-index:1100; left:50%; bottom:22px; width:min(460px,calc(100% - 28px)); padding:13px 16px; border-radius:12px; color:#fff; background:#123c5e; box-shadow:var(--shadow); text-align:center; font-size:.88rem; transform:translate(-50%,20px); opacity:0; pointer-events:none; transition:.25s; }
-    .notice.show { opacity:1; transform:translate(-50%,0); }
-    [aria-disabled="true"] { opacity:.55; cursor:not-allowed; }
-    :focus-visible { outline:3px solid #ffbf47; outline-offset:3px; }
-    @media (max-width:900px) {
-      .layout { grid-template-columns:1fr; }
-      .right-panel { order:2; }
-      .left-panel { order:1; }
-    }
-    @media (max-width:560px) {
-      .site-shell { padding:14px 12px 28px; }
-      .brand-header { padding:4px 0 14px; }
-      .brand-logo { width:190px; }
-      .panel { padding:18px 14px; border-radius:18px; }
-      .access-links { grid-template-columns:1fr; }
-      .service-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:9px; }
-      .service-btn { min-height:100px; }
-      .tile-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
-      .speed-grid { gap:7px; }
-      .speed-link { min-height:62px; font-size:.76rem; }
-      .contact-bar { gap:9px; }
-      .contact-item { font-size:.8rem; }
-      .intro { font-size:.91rem; }
+      font-family: 'Inter', sans-serif;
+      background-color: #f0f9ff;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.35) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(14, 165, 233, 0.3) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(125, 211, 252, 0.4) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(186, 230, 253, 0.5) 0px, transparent 50%),
+        linear-gradient(180deg, #ffffff 0%, #e0f2fe 50%, #bae6fd 100%);
+      color: #0f172a;
+      min-height: 100vh;
+      overflow-x: hidden;
     }
 
-    /* Khung ảnh chờ thay asset: giữ sẵn tỷ lệ và bố cục khi chưa có ảnh */
-    .visual-showcase { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:13px; margin:22px 0 4px; }
-    .visual-card {
-      position:relative; min-height:190px; overflow:hidden; display:flex; align-items:flex-end;
-      padding:14px; border:1px solid rgba(35,166,236,.38); border-radius:17px;
-      background:
-        radial-gradient(circle at 75% 20%,rgba(255,255,255,.95),transparent 24%),
-        linear-gradient(145deg,#dff5ff 0%,#8ddcff 48%,#147ac8 100%);
-      box-shadow:inset 0 0 0 1px rgba(255,255,255,.55),0 10px 22px rgba(4,108,183,.12);
+    /* Sparkle Animation for Link Box */
+    @keyframes sparkAnim {
+      0% { transform: scale(0); opacity: 1; }
+      100% { transform: scale(1.5); opacity: 0; }
     }
-    .visual-card::before { content:""; position:absolute; width:150px; height:150px; right:-25px; top:-35px; border:1px solid rgba(255,255,255,.65); border-radius:50%; box-shadow:0 0 0 15px rgba(255,255,255,.12),0 0 0 32px rgba(255,255,255,.08); }
-    .visual-card::after { content:""; position:absolute; inset:auto 0 0; height:58%; background:linear-gradient(transparent,rgba(3,47,89,.78)); pointer-events:none; }
-    .image-slot {
-      position:absolute; inset:9px 9px 52px; display:grid; place-items:center; padding:12px;
-      border:1.5px dashed rgba(255,255,255,.88); border-radius:12px;
-      color:#075b9c; background:linear-gradient(135deg,rgba(255,255,255,.64),rgba(232,249,255,.26));
-      text-align:center; backdrop-filter:blur(2px);
-    }
-    .image-slot .slot-inner { display:grid; justify-items:center; gap:7px; max-width:190px; }
-    .image-slot .slot-symbol { display:grid; place-items:center; width:42px; height:42px; border-radius:13px; color:#fff; background:linear-gradient(145deg,#0874c9,#42c6ff); box-shadow:0 6px 15px rgba(0,89,157,.22); font-size:1.25rem; }
-    .image-slot strong { font-size:.78rem; letter-spacing:.04em; }
-    .image-slot small { color:#326987; font-size:.68rem; line-height:1.35; }
-    .visual-caption { position:relative; z-index:2; color:#fff; font-size:.82rem; font-weight:900; letter-spacing:.04em; text-shadow:0 2px 5px rgba(0,0,0,.28); }
-    .download-area { margin-top:20px; padding:16px; border:1px solid #c8e9fb; border-radius:16px; background:linear-gradient(135deg,#f4fcff,#e4f5ff); }
-    .download-heading { margin:0 0 12px; color:var(--blue-950); font-size:.9rem; font-weight:900; }
-    .download-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
-    .download-slot {
-      min-height:68px; display:grid; place-items:center; padding:9px;
-      border:1.5px dashed #79c8ef; border-radius:12px; background:rgba(255,255,255,.8);
-      color:#176a9e; text-align:center; font-size:.74rem; font-weight:850;
-    }
-    .download-slot span { display:block; margin-top:4px; color:#6b8ba1; font-size:.65rem; font-weight:500; }
-    .panel { backdrop-filter:blur(10px); }
-    .brand-header { position:relative; }
-    .brand-header::after { content:""; position:absolute; bottom:9px; left:50%; width:min(250px,60%); height:2px; transform:translateX(-50%); background:linear-gradient(90deg,transparent,#7ed8ff,#fff,#7ed8ff,transparent); }
-    .service-icon { position:relative; overflow:hidden; }
-    .service-icon::after { content:""; position:absolute; inset:-60% auto auto -35%; width:80%; height:180%; transform:rotate(35deg); background:linear-gradient(90deg,transparent,rgba(255,255,255,.28),transparent); }
-    .access-card { border:1px solid rgba(255,255,255,.62); }
-    .site-footer { text-shadow:0 1px #fff; }
-    @media (max-width:560px) {
-      .visual-showcase { gap:9px; }
-      .visual-card { min-height:155px; padding:10px; }
-      .image-slot { inset:7px 7px 43px; }
-      .visual-caption { font-size:.7rem; }
-      .download-area { padding:13px; }
+    .link-spark {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: #0284c7;
+      border-radius: 50%;
+      animation: sparkAnim 2s infinite ease-out;
     }
 
-    @media (prefers-reduced-motion:reduce) {
-      *,*::before,*::after { scroll-behavior:auto!important; transition:none!important; }
+    /* Bright Luminous Glassmorphism effects with High Text Contrast */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1.5px solid rgba(186, 230, 253, 0.95);
+      box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.16), 0 4px 10px -2px rgba(14, 165, 233, 0.1);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f0f9ff;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #38bdf8;
+      border-radius: 4px;
     }
   </style>
 </head>
-<body>
-  <div class="site-shell">
-    <header class="brand-header">
-      <a href="/" aria-label="Jun88 - Trang chủ">
-        <img class="brand-logo" src="./assets/logo-jun88.png" width="451" height="436" alt="Logo Jun88">
-      </a>
+
+<body class="antialiased selection:bg-sky-500 selection:text-white">
+  <div class="main-wrapper max-w-7xl mx-auto px-4 py-4 md:py-8">
+
+    <!-- Header Logo Section -->
+    <header class="flex justify-between items-center mb-6 md:mb-10">
+      <div class="flex items-center gap-3">
+        <!-- Mobile Home Button -->
+        <a href="https://jun8801.com" target="_blank" rel="nofollow" class="md:hidden bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 p-2.5 rounded-xl transition shadow-md flex items-center justify-center" aria-label="Trang chủ">
+          <i class="fa-solid fa-house text-white text-lg"></i>
+        </a>
+        <!-- Brand Logo (Recreated with high quality SVG / Image fallback) -->
+        <div class="flex items-center gap-3 group cursor-pointer">
+          <div class="relative w-14 h-14 md:w-20 md:h-20 flex items-center justify-center bg-gradient-to-tr from-sky-500 via-blue-500 to-cyan-400 rounded-2xl shadow-lg shadow-sky-400/40 border-2 border-white transform group-hover:scale-105 transition duration-300">
+            <span class="text-3xl md:text-5xl font-black text-white italic tracking-tighter drop-shadow">J</span>
+            <div class="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-400 rounded-full border-2 border-white animate-pulse"></div>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-2xl md:text-4xl font-black tracking-wider bg-gradient-to-r from-blue-800 via-sky-700 to-blue-600 bg-clip-text text-transparent drop-shadow-sm">JUN88</span>
+            <span class="text-[10px] md:text-xs font-extrabold tracking-widest text-sky-800 uppercase">Official Support Center</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Contact Header Bar (Desktop & Mobile) -->
+      <nav aria-label="Liên hệ nhanh" class="hidden sm:flex items-center gap-4 bg-white/95 border border-sky-200 px-5 py-2.5 rounded-2xl shadow-md backdrop-blur-md">
+        <a href="tel:+84357959888" class="flex items-center gap-2.5 hover:text-sky-700 transition">
+          <div class="w-9 h-9 rounded-full bg-sky-100 flex items-center justify-center text-sky-700 shadow-inner">
+            <i class="fa-solid fa-phone-volume text-sm"></i>
+          </div>
+          <div class="flex flex-col text-xs">
+            <span class="text-slate-600 font-semibold">Hotline 24/7:</span>
+            <span class="font-black text-slate-900">+84 357959888</span>
+          </div>
+        </a>
+        <span class="text-slate-300">|</span>
+        <a href="mailto:admin@jun88.com" class="flex items-center gap-2.5 hover:text-sky-700 transition">
+          <div class="w-9 h-9 rounded-full bg-sky-100 flex items-center justify-center text-sky-700 shadow-inner">
+            <i class="fa-solid fa-envelope text-sm"></i>
+          </div>
+          <div class="flex flex-col text-xs">
+            <span class="text-slate-600 font-semibold">Email hỗ trợ:</span>
+            <span class="font-black text-slate-900">admin@jun88.com</span>
+          </div>
+        </a>
+      </nav>
     </header>
 
-    <main class="layout">
-      <section class="panel left-panel" aria-labelledby="page-title">
-        <p class="eyebrow">Jun88 Customer Care</p>
-        <h1 id="page-title">TRUNG TÂM DỊCH VỤ KHÁCH HÀNG JUN88</h1>
-        <p class="intro">Tổng hợp các đường dẫn truy cập và tiện ích hỗ trợ khách hàng Jun88. Vui lòng kiểm tra kỹ địa chỉ trước khi đăng nhập hoặc gửi thông tin cá nhân.</p>
-        <div class="visual-showcase" aria-label="Khu vực hình ảnh thương hiệu">
-          <figure class="visual-card">
-            <div class="image-slot" data-image-slot="partner-main">
-              <div class="slot-inner"><span class="slot-symbol" aria-hidden="true">✦</span><strong>KHUNG HÌNH ẢNH 01</strong><small>Thay ảnh đại diện / đại sứ thương hiệu tại đây</small></div>
-            </div>
-            <figcaption class="visual-caption">JUN88 – ĐỒNG HÀNH CÙNG BẠN</figcaption>
-          </figure>
-          <figure class="visual-card">
-            <div class="image-slot" data-image-slot="brand-promo">
-              <div class="slot-inner"><span class="slot-symbol" aria-hidden="true">◇</span><strong>KHUNG HÌNH ẢNH 02</strong><small>Thay banner giới thiệu / hình ảnh thương hiệu tại đây</small></div>
-            </div>
-            <figcaption class="visual-caption">TRẢI NGHIỆM DỊCH VỤ</figcaption>
-          </figure>
+    <!-- Center Title Banner -->
+    <div class="text-center mb-8">
+      <div class="inline-block bg-gradient-to-r from-sky-500 via-blue-600 to-cyan-500 border-2 border-white px-7 py-3.5 rounded-2xl shadow-xl shadow-sky-400/30">
+        <h1 class="text-lg sm:text-xl md:text-3xl font-black tracking-wider text-white uppercase flex items-center justify-center gap-3 drop-shadow">
+          <i class="fa-solid fa-headset text-sky-100 animate-bounce"></i>
+          TRUNG TÂM DỊCH VỤ KHÁCH HÀNG JUN88
+        </h1>
+      </div>
+    </div>
+
+    <!-- Main Grid Content -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+      <!-- Left Column: Links, Ambassadors & Apps -->
+      <section aria-label="Thông tin đối tác và đường dẫn" class="lg:col-span-6 flex flex-col gap-6">
+
+        <!-- Partnership / Ambassadors Banner -->
+        <div class="glass-card rounded-2xl p-4 sm:p-5 flex flex-col items-center justify-between relative overflow-hidden group">
+          <div class="absolute inset-0 bg-gradient-to-b from-sky-100/50 via-transparent to-sky-200/40 pointer-events-none"></div>
+          
+          <!-- Endorser & Strategic Partner Image Container -->
+          <div class="w-full flex items-center justify-center overflow-hidden rounded-xl mb-4 relative z-10 bg-gradient-to-tr from-sky-50 to-white p-2 border border-sky-100">
+            <img 
+              src="/images/dai-su-jun88.webp" 
+              alt="Đối Tác Chiến Lược và Đại Sứ Thương Hiệu Jun88" 
+              class="w-full max-w-md h-auto object-contain rounded-xl transform group-hover:scale-[1.02] transition duration-500 drop-shadow-md"
+              onerror="this.onerror=null; this.src='https://placehold.co/600x360/0ea5e9/ffffff?text=Jun88+Official+Ambassador+%26+Partner';"
+            />
+          </div>
+
+          <!-- App Download Buttons (Android & iOS) -->
+          <div class="grid grid-cols-2 gap-3 w-full relative z-10">
+            <a href="https://jun8801.com/taiapp" target="_blank" rel="nofollow" class="w-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-white text-center py-3 px-3 rounded-xl font-bold text-xs uppercase shadow-md shadow-emerald-500/25 transition transform hover:scale-[1.02] flex items-center justify-center gap-2">
+              <i class="fa-brands fa-android text-base"></i> Tải App Android
+            </a>
+            <a href="https://jun8801.com/taiapp" target="_blank" rel="nofollow" class="w-full bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white text-center py-3 px-3 rounded-xl font-bold text-xs uppercase shadow-md shadow-sky-500/25 transition transform hover:scale-[1.02] flex items-center justify-center gap-2">
+              <i class="fa-brands fa-apple text-base"></i> Tải App iOS
+            </a>
+          </div>
         </div>
 
-        <section class="access-card" aria-labelledby="access-heading">
-          <h2 class="access-title" id="access-heading">JUN88 – LINK TRUY CẬP</h2>
-          <p class="access-note">Chọn đường dẫn phù hợp với thiết bị đang sử dụng.</p>
-          <div class="access-links">
-            <a class="access-link" data-url="links.pc" href="#" target="_blank" rel="noopener noreferrer"><span class="check" aria-hidden="true">✓</span><span>PC: Link truy cập chính</span></a>
-            <a class="access-link" data-url="links.mobile" href="#" target="_blank" rel="noopener noreferrer"><span class="check" aria-hidden="true">✓</span><span>Mobile: Link di động</span></a>
+        <!-- Official Link Box -->
+        <div class="glass-card rounded-2xl p-6 relative overflow-hidden">
+          <div class="absolute top-0 right-0 p-3 opacity-10 pointer-events-none">
+            <i class="fa-solid fa-link text-7xl text-sky-600"></i>
           </div>
-          <p class="warning">Lưu ý: Chỉ sử dụng đường dẫn đã được đơn vị vận hành xác nhận. Không chia sẻ mật khẩu hoặc mã xác thực.</p>
-        </section>
-
-        <section class="speed-area" aria-labelledby="speed-heading">
-          <h2 id="speed-heading">ĐƯỜNG DẪN TRUY CẬP DỰ PHÒNG</h2>
-          <div class="speed-grid">
-            <a class="speed-link" data-url="links.backup1" href="#" target="_blank" rel="noopener noreferrer">ĐƯỜNG DẪN 01</a>
-            <a class="speed-link" data-url="links.backup2" href="#" target="_blank" rel="noopener noreferrer">ĐƯỜNG DẪN 02</a>
-            <a class="speed-link" data-url="links.backup3" href="#" target="_blank" rel="noopener noreferrer">ĐƯỜNG DẪN 03</a>
+          
+          <div class="flex items-center gap-2.5 mb-4">
+            <div class="bg-gradient-to-tr from-sky-600 to-blue-700 p-2 rounded-lg text-white shadow-sm">
+              <i class="fa-solid fa-shield-check"></i>
+            </div>
+            <span class="text-base font-black text-slate-900 tracking-wider">JUN88 LINK CHÍNH THỨC</span>
           </div>
-        </section>
 
-        <section class="download-area" aria-labelledby="download-heading">
-          <h2 class="download-heading" id="download-heading">TẢI ỨNG DỤNG JUN88</h2>
-          <div class="download-grid">
-            <div class="download-slot" data-image-slot="download-android">KHUNG ẢNH ANDROID<span>Chèn banner / nút tải Android</span></div>
-            <div class="download-slot" data-image-slot="download-ios">KHUNG ẢNH IOS<span>Chèn banner / nút tải iOS</span></div>
+          <div class="bg-sky-50 rounded-xl p-4 border border-sky-200 mb-4 relative overflow-hidden">
+            <p class="text-xs font-extrabold text-sky-900 mb-3 uppercase tracking-wide">🔗 Cổng truy cập không bị chặn:</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <a href="https://Jun88VIP.COM" target="_blank" rel="nofollow" class="bg-gradient-to-r from-sky-600 to-blue-700 hover:from-sky-500 hover:to-blue-600 p-3 rounded-xl text-white font-bold text-sm flex items-center gap-3 shadow-md shadow-sky-600/25 transition transform hover:scale-[1.02]">
+                <i class="fa-solid fa-desktop text-white text-lg"></i>
+                <div class="flex flex-col">
+                  <span class="text-[10px] text-sky-100 font-semibold uppercase">Máy tính (PC)</span>
+                  <span class="font-extrabold tracking-wide">Jun88VIP.COM</span>
+                </div>
+              </a>
+              <a href="https://Jun88M.COM" target="_blank" rel="nofollow" class="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 p-3 rounded-xl text-white font-bold text-sm flex items-center gap-3 shadow-md shadow-cyan-600/25 transition transform hover:scale-[1.02]">
+                <i class="fa-solid fa-mobile-screen-button text-white text-lg"></i>
+                <div class="flex flex-col">
+                  <span class="text-[10px] text-sky-100 font-semibold uppercase">Điện thoại (Mobile)</span>
+                  <span class="font-extrabold tracking-wide">Jun88M.COM</span>
+                </div>
+              </a>
+            </div>
           </div>
-        </section>
 
-        <div class="feature-strip">
-          <span class="feature-mark" aria-hidden="true">J</span>
-          <div><strong>Hỗ trợ khách hàng Jun88</strong><span>Cập nhật thông tin liên hệ và đường dẫn tại phần cấu hình ở cuối file HTML.</span></div>
+          <p class="text-[11px] text-amber-950 text-center font-extrabold bg-amber-100 border border-amber-400 p-2.5 rounded-lg flex items-center justify-center gap-2 shadow-xs">
+            <i class="fa-solid fa-triangle-exclamation text-amber-600 text-sm"></i>
+            QUÝ KHÁCH LƯU Ý TRUY CẬP ĐÚNG ĐƯỜNG LINK ĐỂ TRÁNH GIẢ MẠO
+          </p>
         </div>
+
+        <!-- High Speed Routes Links -->
+        <div class="glass-card rounded-2xl p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="fa-solid fa-gauge-high text-sky-700"></i>
+            <span class="text-sm font-black text-slate-900 uppercase">CÁC ĐƯỜNG TRUYỀN TỐC ĐỘ CAO</span>
+          </div>
+          <div class="grid grid-cols-3 gap-3">
+            <a href="https://Jun88VIP.COM" target="_blank" rel="nofollow" class="bg-sky-50/80 hover:bg-sky-600 text-slate-900 hover:text-white border border-sky-200 hover:border-sky-600 p-3 rounded-xl text-center font-extrabold text-xs transition duration-200 flex flex-col items-center gap-1 shadow-sm group">
+              <i class="fa-solid fa-bolt text-amber-500 group-hover:text-amber-200"></i>
+              <span>Link 01</span>
+            </a>
+            <a href="https://Jun88VIP.COM" target="_blank" rel="nofollow" class="bg-sky-50/80 hover:bg-sky-600 text-slate-900 hover:text-white border border-sky-200 hover:border-sky-600 p-3 rounded-xl text-center font-extrabold text-xs transition duration-200 flex flex-col items-center gap-1 shadow-sm group">
+              <i class="fa-solid fa-bolt text-amber-500 group-hover:text-amber-200"></i>
+              <span>Link 02</span>
+            </a>
+            <a href="https://Jun88VIP.COM" target="_blank" rel="nofollow" class="bg-sky-50/80 hover:bg-sky-600 text-slate-900 hover:text-white border border-sky-200 hover:border-sky-600 p-3 rounded-xl text-center font-extrabold text-xs transition duration-200 flex flex-col items-center gap-1 shadow-sm group">
+              <i class="fa-solid fa-bolt text-amber-500 group-hover:text-amber-200"></i>
+              <span>Link 03</span>
+            </a>
+          </div>
+        </div>
+
       </section>
 
-      <section class="panel right-panel" aria-labelledby="services-heading">
-        <p class="eyebrow">Support Center</p>
-        <h2 id="services-heading">KÊNH HỖ TRỢ & DỊCH VỤ</h2>
-        <div class="contact-bar" aria-label="Thông tin liên hệ">
-          <a class="contact-item" data-url="contact.phone" href="#"><span class="contact-icon" aria-hidden="true">☎</span><span><span class="contact-label">Hotline:</span> <span data-text="contact.phoneLabel">Cập nhật hotline</span></span></a>
-          <a class="contact-item" data-url="contact.emailLink" href="#"><span class="contact-icon" aria-hidden="true">✉</span><span><span class="contact-label">Email:</span> <span data-text="contact.emailLabel">Cập nhật email</span></span></a>
+      <!-- Right Column: Interactive Service Buttons & Platforms -->
+      <section aria-label="Hệ thống dịch vụ và hỗ trợ" class="lg:col-span-6 flex flex-col gap-6">
+
+        <!-- Mobile Quick Contact Info Bar -->
+        <div class="sm:hidden flex items-center justify-between bg-white/95 border border-sky-200 p-3 rounded-2xl text-xs shadow-sm">
+          <a href="tel:+84357959888" class="flex items-center gap-2 text-slate-900 font-black">
+            <i class="fa-solid fa-phone text-sky-600"></i>
+            <span>+84 357959888</span>
+          </a>
+          <span class="text-slate-300">|</span>
+          <a href="mailto:admin@jun88.com" class="flex items-center gap-2 text-slate-900 font-black">
+            <i class="fa-solid fa-envelope text-sky-600"></i>
+            <span>admin@jun88.com</span>
+          </a>
         </div>
 
-        <div class="service-grid" aria-label="Dịch vụ khách hàng">
-          <button class="service-btn" type="button" data-iframe="deposit"><span class="service-icon" aria-hidden="true">⇄</span><span class="service-label">NẠP – RÚT</span></button>
-          <button class="service-btn" type="button" data-iframe="promotion"><span class="service-icon" aria-hidden="true">★</span><span class="service-label">KHUYẾN MÃI</span></button>
-          <button class="service-btn" type="button" data-iframe="account"><span class="service-icon" aria-hidden="true">♙</span><span class="service-label">TÀI KHOẢN</span></button>
-          <a class="service-btn" data-url="services.changeInfo" href="#"><span class="service-icon" aria-hidden="true">✎</span><span class="service-label">ĐỔI THÔNG TIN</span></a>
-          <a class="service-btn" data-url="services.telegram" href="#" target="_blank" rel="noopener noreferrer"><span class="service-icon" aria-hidden="true">➤</span><span class="service-label">TELEGRAM</span></a>
-          <a class="service-btn" data-url="services.messenger" href="#" target="_blank" rel="noopener noreferrer"><span class="service-icon" aria-hidden="true">✉</span><span class="service-label">MESSENGER</span></a>
-          <a class="service-btn" data-url="services.complaint" href="#" target="_blank" rel="noopener noreferrer"><span class="service-icon" aria-hidden="true">⚑</span><span class="service-label">KHIẾU NẠI</span></a>
-          <a class="service-btn" data-url="services.liveCode" href="#"><span class="service-icon" aria-hidden="true">▶</span><span class="service-label">CODE LIVESTREAM</span></a>
+        <!-- Main Interactive Service Buttons Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          
+          <!-- Nạp - Rút -->
+          <button type="button" class="service-btn glass-card hover:bg-white border border-sky-200 hover:border-sky-500 p-4 rounded-2xl flex flex-col items-center justify-center gap-2.5 transition duration-300 group cursor-pointer" data-tab-control="iframe-naprut">
+            <div class="w-12 h-12 rounded-xl bg-sky-100 flex items-center justify-center text-sky-700 group-hover:bg-sky-600 group-hover:text-white group-hover:scale-110 transition duration-300 shadow-inner">
+              <i class="fa-solid fa-wallet text-xl"></i>
+            </div>
+            <span class="text-xs font-black text-slate-900 text-center tracking-wide">NẠP - RÚT</span>
+          </button>
+
+          <!-- Khuyến Mãi -->
+          <button type="button" class="service-btn glass-card hover:bg-white border border-sky-200 hover:border-amber-500 p-4 rounded-2xl flex flex-col items-center justify-center gap-2.5 transition duration-300 group cursor-pointer" data-tab-control="iframe-km">
+            <div class="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center text-amber-700 group-hover:bg-amber-500 group-hover:text-white group-hover:scale-110 transition duration-300 shadow-inner">
+              <i class="fa-solid fa-gift text-xl"></i>
+            </div>
+            <span class="text-xs font-black text-slate-900 text-center tracking-wide">KHUYẾN MÃI</span>
+          </button>
+
+          <!-- Tài Khoản -->
+          <button type="button" class="service-btn glass-card hover:bg-white border border-sky-200 hover:border-blue-500 p-4 rounded-2xl flex flex-col items-center justify-center gap-2.5 transition duration-300 group cursor-pointer" data-tab-control="iframe-taikhoan">
+            <div class="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center text-blue-700 group-hover:bg-blue-600 group-hover:text-white group-hover:scale-110 transition duration-300 shadow-inner">
+              <i class="fa-solid fa-user-gear text-xl"></i>
+            </div>
+            <span class="text-xs font-black text-slate-900 text-center tracking-wide">TÀI KHOẢN</span>
+          </button>
+
+          <!-- Đổi Thông Tin -->
+          <a href="https://jun8801.com/doithongtin1" target="_blank" rel="nofollow" class="glass-card hover:bg-white border border-sky-200 hover:border-emerald-500 p-4 rounded-2xl flex flex-col items-center justify-center gap-2.5 transition duration-300 group cursor-pointer">
+            <div class="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-700 group-hover:bg-emerald-600 group-hover:text-white group-hover:scale-110 transition duration-300 shadow-inner">
+              <i class="fa-solid fa-id-card text-xl"></i>
+            </div>
+            <span class="text-xs font-black text-slate-900 text-center tracking-wide">ĐỔI THÔNG TIN</span>
+          </a>
+
+          <!-- Telegram -->
+          <a href="https://jun8801.com/tele-hotro-24-7" target="_blank" rel="nofollow" class="glass-card hover:bg-white border border-sky-200 hover:border-sky-500 p-4 rounded-2xl flex flex-col items-center justify-center gap-2.5 transition duration-300 group cursor-pointer">
+            <div class="w-12 h-12 rounded-xl bg-sky-100 flex items-center justify-center text-sky-600 group-hover:bg-sky-500 group-hover:text-white group-hover:scale-110 transition duration-300 shadow-inner">
+              <i class="fa-brands fa-telegram text-xl"></i>
+            </div>
+            <span class="text-xs font-black text-slate-900 text-center tracking-wide">TELEGRAM</span>
+          </a>
+
+          <!-- Messenger -->
+          <a href="https://jun8801.com/facebook" target="_blank" rel="nofollow" class="glass-card hover:bg-white border border-sky-200 hover:border-indigo-500 p-4 rounded-2xl flex flex-col items-center justify-center gap-2.5 transition duration-300 group cursor-pointer">
+            <div class="w-12 h-12 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-700 group-hover:bg-indigo-600 group-hover:text-white group-hover:scale-110 transition duration-300 shadow-inner">
+              <i class="fa-brands fa-facebook-messenger text-xl"></i>
+            </div>
+            <span class="text-xs font-black text-slate-900 text-center tracking-wide">MESSENGER</span>
+          </a>
+
+          <!-- Khiếu Nại -->
+          <a href="https://telegram.me/KenhkhieunaiJun88" target="_blank" rel="nofollow" class="glass-card hover:bg-white border border-sky-200 hover:border-rose-500 p-4 rounded-2xl flex flex-col items-center justify-center gap-2.5 transition duration-300 group cursor-pointer">
+            <div class="w-12 h-12 rounded-xl bg-rose-100 flex items-center justify-center text-rose-700 group-hover:bg-rose-600 group-hover:text-white group-hover:scale-110 transition duration-300 shadow-inner">
+              <i class="fa-solid fa-triangle-exclamation text-xl"></i>
+            </div>
+            <span class="text-xs font-black text-slate-900 text-center tracking-wide">KHIẾU NẠI</span>
+          </a>
+
+          <!-- Code Livestream -->
+          <a href="https://jun8801.com/xemlivenhanthuong" target="_blank" rel="nofollow" class="glass-card hover:bg-white border border-sky-200 hover:border-purple-500 p-4 rounded-2xl flex flex-col items-center justify-center gap-2.5 transition duration-300 group cursor-pointer">
+            <div class="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center text-purple-700 group-hover:bg-purple-600 group-hover:text-white group-hover:scale-110 transition duration-300 shadow-inner">
+              <i class="fa-solid fa-video text-xl"></i>
+            </div>
+            <span class="text-xs font-black text-slate-900 text-center tracking-wide">LIVESTREAM</span>
+          </a>
+
         </div>
 
-        <section class="group-section" aria-labelledby="platform-heading">
-          <h3 class="group-heading" id="platform-heading">NỀN TẢNG HỖ TRỢ</h3>
-          <div class="tile-grid">
-            <a class="tile" data-url="platform.agency" href="#"><span class="tile-icon" aria-hidden="true">♧</span><span>ĐẠI LÝ</span></a>
-            <a class="tile" data-url="platform.gifts" href="#"><span class="tile-icon" aria-hidden="true">♜</span><span>VẬT PHẨM</span></a>
-            <a class="tile" data-url="platform.feedback" href="#"><span class="tile-icon" aria-hidden="true">✉</span><span>THƯ GÓP Ý</span></a>
-            <a class="tile" data-url="platform.guide" href="#"><span class="tile-icon" aria-hidden="true">▤</span><span>CẨM NANG</span></a>
+        <!-- Support Platforms Section -->
+        <div class="glass-card rounded-2xl p-5">
+          <div class="bg-gradient-to-r from-sky-600 to-blue-700 py-2 px-4 rounded-xl mb-4 text-center shadow-sm">
+            <span class="text-xs font-black tracking-widest text-white uppercase">NỀN TẢNG HỖ TRỢ</span>
           </div>
-        </section>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <a href="https://jun8801.com/daily" target="_blank" rel="nofollow" class="bg-sky-50/70 hover:bg-sky-100 border border-sky-200 hover:border-sky-400 p-3 rounded-xl flex flex-col items-center gap-2 transition group shadow-xs">
+              <div class="w-10 h-10 rounded-lg bg-sky-100 flex items-center justify-center text-sky-700 group-hover:scale-110 transition">
+                <i class="fa-solid fa-handshake text-lg"></i>
+              </div>
+              <span class="text-[11px] font-black text-slate-900">ĐẠI LÝ</span>
+            </a>
+            <a href="https://jun8801.com/quatang" target="_blank" rel="nofollow" class="bg-sky-50/70 hover:bg-sky-100 border border-sky-200 hover:border-sky-400 p-3 rounded-xl flex flex-col items-center gap-2 transition group shadow-xs">
+              <div class="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center text-amber-700 group-hover:scale-110 transition">
+                <i class="fa-solid fa-box-open text-lg"></i>
+              </div>
+              <span class="text-[11px] font-black text-slate-900">VẬT PHẨM</span>
+            </a>
+            <a href="https://jun8801.com/hom-thu" target="_blank" rel="nofollow" class="bg-sky-50/70 hover:bg-sky-100 border border-sky-200 hover:border-sky-400 p-3 rounded-xl flex flex-col items-center gap-2 transition group shadow-xs">
+              <div class="w-10 h-10 rounded-lg bg-emerald-100 flex items-center justify-center text-emerald-700 group-hover:scale-110 transition">
+                <i class="fa-solid fa-inbox text-lg"></i>
+              </div>
+              <span class="text-[11px] font-black text-slate-900">THƯ GÓP Ý</span>
+            </a>
+            <a href="https://jun8801.com/huongdan" target="_blank" rel="nofollow" class="bg-sky-50/70 hover:bg-sky-100 border border-sky-200 hover:border-sky-400 p-3 rounded-xl flex flex-col items-center gap-2 transition group shadow-xs">
+              <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center text-blue-700 group-hover:scale-110 transition">
+                <i class="fa-solid fa-book text-lg"></i>
+              </div>
+              <span class="text-[11px] font-black text-slate-900">CẨM NANG</span>
+            </a>
+          </div>
+        </div>
 
-        <section class="group-section" aria-labelledby="channels-heading">
-          <h3 class="group-heading" id="channels-heading">KÊNH THÔNG TIN</h3>
-          <div class="tile-grid">
-            <a class="tile" data-url="channels.events" href="#"><span class="tile-icon" aria-hidden="true">▣</span><span>KÊNH SỰ KIỆN</span></a>
-            <a class="tile" data-url="channels.facebook" href="#" target="_blank" rel="noopener noreferrer"><span class="tile-icon" aria-hidden="true">f</span><span>FACEBOOK</span></a>
-            <a class="tile" data-url="channels.youtube" href="#" target="_blank" rel="noopener noreferrer"><span class="tile-icon" aria-hidden="true">▶</span><span>YOUTUBE</span></a>
-            <a class="tile" data-url="channels.vip" href="#"><span class="tile-icon" aria-hidden="true">♛</span><span>CLB VIP</span></a>
+        <!-- Information Channels Section -->
+        <div class="glass-card rounded-2xl p-5">
+          <div class="bg-gradient-to-r from-blue-700 to-cyan-600 py-2 px-4 rounded-xl mb-4 text-center shadow-sm">
+            <span class="text-xs font-black tracking-widest text-white uppercase">KÊNH THÔNG TIN</span>
           </div>
-        </section>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <a href="https://jun8801.com/kenh-su-kien" target="_blank" rel="nofollow" class="bg-sky-50/70 hover:bg-sky-100 border border-sky-200 hover:border-sky-400 p-3 rounded-xl flex flex-col items-center gap-2 transition group shadow-xs">
+              <div class="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center text-purple-700 group-hover:scale-110 transition">
+                <i class="fa-solid fa-calendar-days text-lg"></i>
+              </div>
+              <span class="text-[11px] font-black text-slate-900">SỰ KIỆN</span>
+            </a>
+            <a href="https://jun8801.com/facebook" target="_blank" rel="nofollow" class="bg-sky-50/70 hover:bg-sky-100 border border-sky-200 hover:border-sky-400 p-3 rounded-xl flex flex-col items-center gap-2 transition group shadow-xs">
+              <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center text-blue-700 group-hover:scale-110 transition">
+                <i class="fa-brands fa-facebook text-lg"></i>
+              </div>
+              <span class="text-[11px] font-black text-slate-900">FACEBOOK</span>
+            </a>
+            <a href="https://jun8801.com/youtube" target="_blank" rel="nofollow" class="bg-sky-50/70 hover:bg-sky-100 border border-sky-200 hover:border-sky-400 p-3 rounded-xl flex flex-col items-center gap-2 transition group shadow-xs">
+              <div class="w-10 h-10 rounded-lg bg-rose-100 flex items-center justify-center text-rose-700 group-hover:scale-110 transition">
+                <i class="fa-brands fa-youtube text-lg"></i>
+              </div>
+              <span class="text-[11px] font-black text-slate-900">YOUTUBE</span>
+            </a>
+            <a href="https://jun8801.com/vip" target="_blank" rel="nofollow" class="bg-sky-50/70 hover:bg-sky-100 border border-sky-200 hover:border-sky-400 p-3 rounded-xl flex flex-col items-center gap-2 transition group shadow-xs">
+              <div class="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center text-amber-700 group-hover:scale-110 transition">
+                <i class="fa-solid fa-crown text-lg"></i>
+              </div>
+              <span class="text-[11px] font-black text-slate-900">CLB VIP</span>
+            </a>
+          </div>
+        </div>
+
       </section>
-    </main>
 
-    <footer class="site-footer">
-      <p><strong>Jun88 – Trung tâm dịch vụ khách hàng</strong></p>
-      <p>Thông tin trên trang cần được cập nhật và xác minh bởi đơn vị vận hành trước khi công bố. Hãy bảo vệ thông tin đăng nhập và dữ liệu cá nhân của bạn.</p>
+    </div>
+
+    <!-- Footer Copyright -->
+    <footer class="mt-12 text-center text-xs font-extrabold text-slate-800 border-t border-sky-300 pt-6">
+      <p>&copy; 2026 Jun88 Official Customer Service Center. All rights reserved.</p>
     </footer>
+
   </div>
 
-  <div class="modal-backdrop" id="service-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
-    <section class="service-modal">
-      <header class="modal-head"><h2 id="modal-title">Dịch vụ Jun88</h2><button class="modal-close" type="button" aria-label="Đóng cửa sổ">×</button></header>
-      <iframe class="modal-frame" id="service-frame" title="Nội dung dịch vụ Jun88" src="about:blank" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-    </section>
+  <!-- Draggable Service Chatbox / Iframe Popup Modal -->
+  <div id="box-iframe" class="fixed bottom-0 right-0 z-50 max-w-sm w-full bg-slate-900 border-t-2 border-sky-500 shadow-2xl rounded-t-2xl hidden overflow-hidden" style="position: fixed; z-index: 999999;">
+    <div id="draggable" class="bg-sky-600 px-4 py-2.5 flex items-center justify-between cursor-move select-none">
+      <div class="flex items-center gap-2 text-white font-bold text-xs">
+        <i class="fa-solid fa-comments"></i>
+        <span>HỖ TRỢ TRỰC TUYẾN JUN88</span>
+      </div>
+      <button id="btn-tawk-small" class="text-white hover:text-red-200 text-lg font-bold w-6 h-6 flex items-center justify-center rounded transition cursor-pointer" aria-label="Đóng">&times;</button>
+    </div>
+    
+    <div id="show-iframe-open" class="h-80 bg-slate-950 p-2 relative">
+      <div class="code-iframe pc-btn-tab h-full" data-content-tab="iframe-naprut" style="display: none;">
+        <iframe class="w-full h-full rounded-lg border border-sky-500/20" src="https://jun8801.com/naprut" title="Nạp rút chat"></iframe>
+      </div>
+      <div class="code-iframe pc-btn-tab h-full" data-content-tab="iframe-taikhoan" style="display: none;">
+        <iframe class="w-full h-full rounded-lg border border-sky-500/20" src="https://jun8801.com/vandekhac" title="Tài khoản chat"></iframe>
+      </div>
+      <div class="code-iframe pc-btn-tab h-full active" data-content-tab="iframe-km">
+        <iframe class="w-full h-full rounded-lg border border-sky-500/20" src="https://jun8801.com/khuyenmai" title="Khuyến mãi chat"></iframe>
+      </div>
+    </div>
   </div>
-  <div class="notice" id="notice" role="status" aria-live="polite"></div>
 
+  <!-- Scripts for interactivity & modal toggling -->
   <script>
-    /*
-     * ========================= CẤU HÌNH JUN88 =========================
-     * Chỉ cần thay URL/đầu mối liên hệ tại đây. Để trống URL nếu chưa có.
-     * Không điền URL không thuộc quyền quản lý hoặc chưa được xác minh.
-     * Khung ảnh đang để sẵn trong HTML: tìm data-image-slot để thay bằng thẻ img.
-     */
-    const JUN88_CONFIG = {
-      links: {
-        pc: "",
-        mobile: "",
-        backup1: "",
-        backup2: "",
-        backup3: ""
-      },
-      contact: {
-        phone: "",          // Ví dụ: +84123456789
-        phoneLabel: "Cập nhật hotline",
-        emailLink: "",      // Ví dụ: mailto:support@example.com
-        emailLabel: "Cập nhật email"
-      },
-      services: {
-        changeInfo: "",
-        telegram: "",
-        messenger: "",
-        complaint: "",
-        liveCode: ""
-      },
-      platform: {
-        agency: "",
-        gifts: "",
-        feedback: "",
-        guide: ""
-      },
-      channels: {
-        events: "",
-        facebook: "",
-        youtube: "",
-        vip: ""
-      },
-      iframes: {
-        deposit: "",        // URL trang nạp/rút
-        promotion: "",      // URL trang khuyến mãi
-        account: ""         // URL trang hỗ trợ tài khoản
-      }
-    };
+    $(document).ready(function() {
+      // Make popup draggable
+      $("#box-iframe").draggable({
+        handle: "#draggable"
+      });
 
-    const getConfigValue = (path) => path.split(".").reduce((obj, key) => obj && obj[key], JUN88_CONFIG);
-    const notice = document.getElementById("notice");
-    let noticeTimer;
-    function showNotice(message) {
-      notice.textContent = message;
-      notice.classList.add("show");
-      window.clearTimeout(noticeTimer);
-      noticeTimer = window.setTimeout(() => notice.classList.remove("show"), 3000);
-    }
+      // Toggle service popup modal based on clicked tab
+      $(".service-btn").on("click", function(e) {
+        e.preventDefault();
+        const tabTarget = $(this).attr("data-tab-control");
+        
+        // Show popup container
+        $("#box-iframe").fadeIn(300);
 
-    document.querySelectorAll("[data-url]").forEach((element) => {
-      const path = element.dataset.url;
-      const value = getConfigValue(path);
-      if (value) {
-        element.href = value;
-        if (value.startsWith("tel:") || value.startsWith("mailto:")) {
-          element.removeAttribute("target");
-        }
-      } else {
-        element.href = "#";
-        element.setAttribute("aria-disabled", "true");
-        element.addEventListener("click", (event) => {
-          event.preventDefault();
-          showNotice("Liên kết này chưa được cấu hình. Vui lòng cập nhật trong JUN88_CONFIG.");
-        });
-      }
-    });
+        // Switch active tab content inside iframe box
+        $(".pc-btn-tab").hide();
+        $(`.pc-btn-tab[data-content-tab="${tabTarget}"]`).show();
+      });
 
-    document.querySelectorAll("[data-text]").forEach((element) => {
-      const value = getConfigValue(element.dataset.text);
-      if (value) element.textContent = value;
-    });
-
-    const modal = document.getElementById("service-modal");
-    const modalTitle = document.getElementById("modal-title");
-    const frame = document.getElementById("service-frame");
-    const closeButton = modal.querySelector(".modal-close");
-    const iframeTitles = {
-      deposit: "NẠP – RÚT",
-      promotion: "KHUYẾN MÃI",
-      account: "TÀI KHOẢN"
-    };
-    function closeModal() {
-      modal.classList.remove("is-open");
-      modal.setAttribute("aria-hidden", "true");
-      frame.src = "about:blank";
-    }
-    document.querySelectorAll("[data-iframe]").forEach((button) => {
-      button.addEventListener("click", () => {
-        const key = button.dataset.iframe;
-        const url = JUN88_CONFIG.iframes[key];
-        if (!url) {
-          showNotice("Dịch vụ chưa có URL iframe. Hãy thêm URL tại JUN88_CONFIG.iframes.");
-          return;
-        }
-        modalTitle.textContent = iframeTitles[key] || "Dịch vụ Jun88";
-        frame.src = url;
-        modal.classList.add("is-open");
-        modal.setAttribute("aria-hidden", "false");
-        closeButton.focus();
+      // Close popup button
+      $("#btn-tawk-small").on("click", function() {
+        $("#box-iframe").fadeOut(300);
       });
     });
-    closeButton.addEventListener("click", closeModal);
-    modal.addEventListener("click", (event) => {
-      if (event.target === modal) closeModal();
-    });
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && modal.classList.contains("is-open")) closeModal();
-    });
   </script>
+
+  <!-- OpenWidget / Chatbot integration script -->
+  <script>
+    window.__ow = window.__ow || {};
+    window.__ow.organizationId = "1dfb8170-e699-42ad-91d4-91c5853043b5";
+    window.__ow.template_id = "a8318219-b516-4c8b-b256-e8a2f0465292";
+    window.__ow.integration_name = "manual_settings";
+    window.__ow.product_name = "chatbot";
+    ;(function (n, t, c) {
+      function i(n) { return e._h ? e._h.apply(null, n) : e._q.push(n) }
+      var e = { _q: [], _h: null, _v: "2.0", on: function () { i(["on", c.call(arguments)]) }, once: function () { i(["once", c.call(arguments)]) }, off: function () { i(["off", c.call(arguments)]) }, get: function () { if (!e._h) throw new Error("[OpenWidget] You can't use getters before load."); return i(["get", c.call(arguments)]) }, call: function () { i(["call", c.call(arguments)]) }, init: function () { var n = t.createElement("script"); n.async = !0, n.type = "text/javascript", n.src = "https://cdn.openwidget.com/openwidget.js"; t.head.appendChild(n) } };
+      !n.__ow.asyncInit && e.init(), n.OpenWidget = n.OpenWidget || e
+    })(window, document, [].slice);
+  </script>
+
 </body>
 </html>
