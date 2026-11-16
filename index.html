@@ -10,7 +10,7 @@
   <title>Kênh Chăm Sóc Khách Hàng Chính Thức Jun88</title>
   
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="https://placehold.co/64x64/0284c7/ffffff?text=J88" />
+  <link rel="icon" type="image/svg+xml" href=/images/jun88-logo-3.png" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,32 +30,94 @@
 
   <!-- Custom Styles for Theme & Animations -->
   <style>
+    :root {
+      /* 1. Màu nền tổng thể (Background) */
+      --bg-page-base: #f0f9ff;
+      --bg-gradient-top: #ffffff;
+      --bg-gradient-mid: #e0f2fe;
+      --bg-gradient-bot: #bae6fd;
 
-    .custom-title-text {
-      color: #ffffff !important; 
-    }
-    .custom-pc-label {
-      color: #0022e0 !important;
-    }
-    .custom-pc-link {
-      color: #0022e0 !important; 
+      /* 2. Màu thẻ nội dung (Glass Cards) */
+      --card-bg: rgba(255, 255, 255, 0.94);
+      --card-border: rgba(186, 230, 253, 0.95);
+
+      /* 3. Màu chữ chính & phụ toàn trang */
+      --text-primary: #0f172a;      
+      --text-secondary: #475569;     
+      --text-accent: #0369a1;        
+
+
+      --banner-bg-start: #0ea5e9;
+      --banner-bg-mid: #2563eb;
+      --banner-bg-end: #06b6d4;
+      --banner-text: #ffffff;
+      --banner-icon: #e0f2fe;
+
+      --pc-btn-start: #0284c7;
+      --pc-btn-end: #1d4ed8;
+      --pc-icon: #0369a1;
+      --pc-label: #e0f2fe;
+      --pc-link-text: #0369a1;
+
+      --mobile-btn-start: #2563eb;
+      --mobile-btn-end: #0891b2;
+      --mobile-icon: #0369a1;
+      --mobile-label: #e0f2fe;
+      --mobile-link-text: #0369a1;
+
+      --section-bar-start: #0284c7;
+      --section-bar-end: #1d4ed8;
+      --section-bar-text: #ffffff;
     }
 
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #f0f9ff;
+      background-color: var(--bg-page-base);
       background-image: 
         radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.35) 0px, transparent 50%),
         radial-gradient(at 100% 0%, rgba(14, 165, 233, 0.3) 0px, transparent 50%),
         radial-gradient(at 100% 100%, rgba(125, 211, 252, 0.4) 0px, transparent 50%),
         radial-gradient(at 0% 100%, rgba(186, 230, 253, 0.5) 0px, transparent 50%),
-        linear-gradient(180deg, #ffffff 0%, #e0f2fe 50%, #bae6fd 100%);
-      color: #0f172a;
+        linear-gradient(180deg, var(--bg-gradient-top) 0%, var(--bg-gradient-mid) 50%, var(--bg-gradient-bot) 100%);
+      color: var(--text-primary);
       min-height: 100vh;
       overflow-x: hidden;
     }
 
-    /* Sparkle Animation for Link Box */
+    .glass-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1.5px solid var(--card-border);
+      box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.16), 0 4px 10px -2px rgba(14, 165, 233, 0.1);
+    }
+
+    /* Class tiện ích kết nối trực tiếp với :root */
+    .theme-text-primary { color: var(--text-primary); }
+    .theme-text-secondary { color: var(--text-secondary); }
+    .theme-text-accent { color: var(--text-accent); }
+
+    .theme-banner-box {
+      background: linear-gradient(to right, var(--banner-bg-start), var(--banner-bg-mid), var(--banner-bg-end));
+    }
+    .theme-banner-text { color: var(--banner-text); }
+    .theme-banner-icon { color: var(--banner-icon); }
+
+    .theme-pc-btn { background: linear-gradient(to right, var(--pc-btn-start), var(--pc-btn-end)); }
+    .theme-pc-icon { color: var(--pc-icon); }
+    .theme-pc-label { color: var(--pc-label); }
+    .theme-pc-link { color: var(--pc-link-text); }
+
+    .theme-mobile-btn { background: linear-gradient(to right, var(--mobile-btn-start), var(--mobile-btn-end)); }
+    .theme-mobile-icon { color: var(--mobile-icon); }
+    .theme-mobile-label { color: var(--mobile-label); }
+    .theme-mobile-link { color: var(--mobile-link-text); }
+
+    .theme-section-bar {
+      background: linear-gradient(to right, var(--section-bar-start), var(--section-bar-end));
+      color: var(--section-bar-text);
+    }
+
     @keyframes sparkAnim {
       0% { transform: scale(0); opacity: 1; }
       100% { transform: scale(1.5); opacity: 0; }
@@ -64,18 +126,9 @@
       position: absolute;
       width: 6px;
       height: 6px;
-      background: #0284c7;
+      background: var(--text-accent);
       border-radius: 50%;
       animation: sparkAnim 2s infinite ease-out;
-    }
-
-    /* Bright Luminous Glassmorphism effects with High Text Contrast */
-    .glass-card {
-      background: rgba(255, 255, 255, 0.94);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1.5px solid rgba(186, 230, 253, 0.95);
-      box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.16), 0 4px 10px -2px rgba(14, 165, 233, 0.1);
     }
 
     /* Custom Scrollbar */
@@ -83,10 +136,10 @@
       width: 8px;
     }
     ::-webkit-scrollbar-track {
-      background: #f0f9ff;
+      background: var(--bg-page-base);
     }
     ::-webkit-scrollbar-thumb {
-      background: #38bdf8;
+      background: var(--banner-bg-start);
       border-radius: 4px;
     }
   </style>
@@ -95,13 +148,12 @@
 <body class="antialiased selection:bg-sky-500 selection:text-white">
   <div class="main-wrapper max-w-7xl mx-auto px-4 py-4 md:py-8">
 
-    <!-- Header Logo Section -->
     <header class="flex justify-between items-center mb-6 md:mb-10">
       <div class="flex items-center gap-3">
-        <!-- Mobile Home Button -->
         <a href="https://jun8801.com" target="_blank" rel="nofollow" class="md:hidden bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 p-2.5 rounded-xl transition shadow-md flex items-center justify-center" aria-label="Trang chủ">
           <i class="fa-solid fa-house text-white text-lg"></i>
         </a>
+
         <a href="https://jun8801.com" target="_blank" rel="nofollow" class="inline-flex items-center group focus:outline-none" aria-label="Trang chủ Jun88">
           <img 
             src="/images/jun88-logo-3.png" 
@@ -113,24 +165,24 @@
       </div>
 
       <!-- Quick Contact Header Bar (Desktop & Mobile) -->
-      <nav aria-label="Liên hệ nhanh" class="hidden sm:flex items-center gap-4 bg-white/95 border border-sky-200 px-5 py-2.5 rounded-2xl shadow-md backdrop-blur-md">
-        <a href="tel:+84357959888" class="flex items-center gap-2.5 hover:text-sky-700 transition">
-          <div class="w-9 h-9 rounded-full bg-sky-100 flex items-center justify-center text-sky-700 shadow-inner">
+      <nav aria-label="Liên hệ nhanh" class="hidden sm:flex items-center gap-4 glass-card px-5 py-2.5 rounded-2xl shadow-md">
+        <a href="tel:+84357959888" class="flex items-center gap-2.5 hover:opacity-80 transition">
+          <div class="w-9 h-9 rounded-full bg-sky-100 flex items-center justify-center theme-text-accent shadow-inner">
             <i class="fa-solid fa-phone-volume text-sm"></i>
           </div>
           <div class="flex flex-col text-xs">
-            <span class="text-slate-600 font-semibold">Hotline 24/7:</span>
-            <span class="font-black text-slate-900">+84 357959888</span>
+            <span class="theme-text-secondary font-semibold">Hotline 24/7:</span>
+            <span class="font-black theme-text-primary">+84 357959888</span>
           </div>
         </a>
         <span class="text-slate-300">|</span>
-        <a href="mailto:admin@jun88.com" class="flex items-center gap-2.5 hover:text-sky-700 transition">
-          <div class="w-9 h-9 rounded-full bg-sky-100 flex items-center justify-center text-sky-700 shadow-inner">
+        <a href="mailto:admin@jun88.com" class="flex items-center gap-2.5 hover:opacity-80 transition">
+          <div class="w-9 h-9 rounded-full bg-sky-100 flex items-center justify-center theme-text-accent shadow-inner">
             <i class="fa-solid fa-envelope text-sm"></i>
           </div>
           <div class="flex flex-col text-xs">
-            <span class="text-slate-600 font-semibold">Email hỗ trợ:</span>
-            <span class="font-black text-slate-900">admin@jun88.com</span>
+            <span class="theme-text-secondary font-semibold">Email hỗ trợ:</span>
+            <span class="font-black theme-text-primary">admin@jun88.com</span>
           </div>
         </a>
       </nav>
@@ -138,9 +190,9 @@
 
     <!-- Center Title Banner -->
     <div class="text-center mb-8">
-      <div class="inline-block bg-gradient-to-r from-sky-500 via-blue-600 to-cyan-500 border-2 border-white px-7 py-3.5 rounded-2xl shadow-xl shadow-sky-400/30">
-        <h1 class="custom-title-text text-lg sm:text-xl md:text-3xl font-black tracking-wider uppercase flex items-center justify-center gap-3 drop-shadow">
-          <i class="fa-solid fa-headset text-sky-100 animate-bounce"></i>
+      <div class="inline-block theme-banner-box border-2 border-white px-7 py-3.5 rounded-2xl shadow-xl shadow-sky-400/30">
+        <h1 class="theme-banner-text text-lg sm:text-xl md:text-3xl font-black tracking-wider uppercase flex items-center justify-center gap-3 drop-shadow">
+          <i class="fa-solid fa-headset theme-banner-icon animate-bounce"></i>
           TRUNG TÂM DỊCH VỤ KHÁCH HÀNG JUN88
         </h1>
       </div>
@@ -159,14 +211,13 @@
           <!-- Endorser & Strategic Partner Image Container -->
           <div class="w-full flex items-center justify-center overflow-hidden rounded-xl mb-4 relative z-10 bg-gradient-to-tr from-sky-50 to-white p-2 border border-sky-100">
             <img 
-              src="https://img.alltocon.com/img/static/jun88/endorser/h5-leftside-vi-vn.png" 
+              src="/images/dai-su-jun88.webp" 
               alt="Đối Tác Chiến Lược và Đại Sứ Thương Hiệu Jun88" 
               class="w-full max-w-md h-auto object-contain rounded-xl transform group-hover:scale-[1.02] transition duration-500 drop-shadow-md"
-              onerror="this.onerror=null; this.src='/images/dai-su-jun88.webp';"
+              onerror="this.onerror=null; this.src='https://placehold.co/600x360/0ea5e9/ffffff?text=Jun88+Official+Ambassador+%26+Partner';"
             />
           </div>
 
-          <!-- App Download Buttons (Android & iOS) -->
           <div class="grid grid-cols-2 gap-3 w-full relative z-10">
             <a href="https://jun8801.com/taiapp" target="_blank" rel="nofollow" class="w-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-white text-center py-3 px-3 rounded-xl font-bold text-xs uppercase shadow-md shadow-emerald-500/25 transition transform hover:scale-[1.02] flex items-center justify-center gap-2">
               <i class="fa-brands fa-android text-base"></i> Tải App Android
@@ -184,27 +235,27 @@
           </div>
           
           <div class="flex items-center gap-2.5 mb-4">
-            <div class="bg-gradient-to-tr from-sky-600 to-blue-700 p-2 rounded-lg text-white shadow-sm">
+            <div class="theme-section-bar p-2 rounded-lg shadow-sm">
               <i class="fa-solid fa-shield-check"></i>
             </div>
-            <span class="text-base font-black text-slate-900 tracking-wider">JUN88 LINK CHÍNH THỨC</span>
+            <span class="text-base font-black theme-text-primary tracking-wider">JUN88 LINK CHÍNH THỨC</span>
           </div>
 
-          <div class="bg-sky-50 rounded-xl p-4 border border-sky-200 mb-4 relative overflow-hidden">
-            <p class="text-xs font-extrabold text-sky-900 mb-3 uppercase tracking-wide">🔗 Cổng truy cập không bị chặn:</p>
+          <div class="bg-sky-50/80 rounded-xl p-4 border border-sky-200 mb-4 relative overflow-hidden">
+            <p class="text-xs font-extrabold theme-text-accent mb-3 uppercase tracking-wide">🔗 Cổng truy cập không bị chặn:</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <a href="https://Jun88VIP.COM" target="_blank" rel="nofollow" class="bg-gradient-to-r from-sky-600 to-blue-700 hover:from-sky-500 hover:to-blue-600 p-3 rounded-xl font-bold text-sm flex items-center gap-3 shadow-md shadow-sky-600/25 transition transform hover:scale-[1.02]">
-                <i class="fa-solid fa-desktop text-white text-lg"></i>
+              <a href="https://Jun88VIP.COM" target="_blank" rel="nofollow" class="theme-pc-btn hover:brightness-110 p-3 rounded-xl font-bold text-sm flex items-center gap-3 shadow-md transition transform hover:scale-[1.02]">
+                <i class="fa-solid fa-desktop theme-pc-icon text-lg"></i>
                 <div class="flex flex-col">
-                  <span class="custom-pc-label text-[10px] font-semibold uppercase">Máy tính (PC)</span>
-                  <span class="custom-pc-link font-extrabold tracking-wide">Jun88VIP.COM</span>
+                  <span class="theme-pc-label text-[10px] font-semibold uppercase">Máy tính (PC)</span>
+                  <span class="theme-pc-link font-extrabold tracking-wide">Jun88VIP.COM</span>
                 </div>
               </a>
-              <a href="https://Jun88M.COM" target="_blank" rel="nofollow" class="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 p-3 rounded-xl text-white font-bold text-sm flex items-center gap-3 shadow-md shadow-cyan-600/25 transition transform hover:scale-[1.02]">
-                <i class="fa-solid fa-mobile-screen-button text-white text-lg"></i>
+              <a href="https://Jun88M.COM" target="_blank" rel="nofollow" class="theme-mobile-btn hover:brightness-110 p-3 rounded-xl font-bold text-sm flex items-center gap-3 shadow-md transition transform hover:scale-[1.02]">
+                <i class="fa-solid fa-mobile-screen-button theme-mobile-icon text-lg"></i>
                 <div class="flex flex-col">
-                  <span class="text-[10px] text-sky-100 font-semibold uppercase">Điện thoại (Mobile)</span>
-                  <span class="font-extrabold tracking-wide">Jun88M.COM</span>
+                  <span class="theme-mobile-label text-[10px] font-semibold uppercase">Điện thoại (Mobile)</span>
+                  <span class="theme-mobile-link font-extrabold tracking-wide">Jun88M.COM</span>
                 </div>
               </a>
             </div>
@@ -219,19 +270,19 @@
         <!-- High Speed Routes Links -->
         <div class="glass-card rounded-2xl p-5">
           <div class="flex items-center gap-2 mb-3">
-            <i class="fa-solid fa-gauge-high text-sky-700"></i>
-            <span class="text-sm font-black text-slate-900 uppercase">CÁC ĐƯỜNG TRUYỀN TỐC ĐỘ CAO</span>
+            <i class="fa-solid fa-gauge-high theme-text-accent"></i>
+            <span class="text-sm font-black theme-text-primary uppercase">CÁC ĐƯỜNG TRUYỀN TỐC ĐỘ CAO</span>
           </div>
           <div class="grid grid-cols-3 gap-3">
-            <a href="https://Jun88VIP.COM" target="_blank" rel="nofollow" class="bg-sky-50/80 hover:bg-sky-600 text-slate-900 hover:text-white border border-sky-200 hover:border-sky-600 p-3 rounded-xl text-center font-extrabold text-xs transition duration-200 flex flex-col items-center gap-1 shadow-sm group">
+            <a href="https://Jun88VIP.COM" target="_blank" rel="nofollow" class="bg-sky-50/80 hover:bg-sky-600 theme-text-primary hover:text-white border border-sky-200 hover:border-sky-600 p-3 rounded-xl text-center font-extrabold text-xs transition duration-200 flex flex-col items-center gap-1 shadow-sm group">
               <i class="fa-solid fa-bolt text-amber-500 group-hover:text-amber-200"></i>
               <span>Link 01</span>
             </a>
-            <a href="https://Jun88VIP.COM" target="_blank" rel="nofollow" class="bg-sky-50/80 hover:bg-sky-600 text-slate-900 hover:text-white border border-sky-200 hover:border-sky-600 p-3 rounded-xl text-center font-extrabold text-xs transition duration-200 flex flex-col items-center gap-1 shadow-sm group">
+            <a href="https://Jun88VIP.COM" target="_blank" rel="nofollow" class="bg-sky-50/80 hover:bg-sky-600 theme-text-primary hover:text-white border border-sky-200 hover:border-sky-600 p-3 rounded-xl text-center font-extrabold text-xs transition duration-200 flex flex-col items-center gap-1 shadow-sm group">
               <i class="fa-solid fa-bolt text-amber-500 group-hover:text-amber-200"></i>
               <span>Link 02</span>
             </a>
-            <a href="https://Jun88VIP.COM" target="_blank" rel="nofollow" class="bg-sky-50/80 hover:bg-sky-600 text-slate-900 hover:text-white border border-sky-200 hover:border-sky-600 p-3 rounded-xl text-center font-extrabold text-xs transition duration-200 flex flex-col items-center gap-1 shadow-sm group">
+            <a href="https://Jun88VIP.COM" target="_blank" rel="nofollow" class="bg-sky-50/80 hover:bg-sky-600 theme-text-primary hover:text-white border border-sky-200 hover:border-sky-600 p-3 rounded-xl text-center font-extrabold text-xs transition duration-200 flex flex-col items-center gap-1 shadow-sm group">
               <i class="fa-solid fa-bolt text-amber-500 group-hover:text-amber-200"></i>
               <span>Link 03</span>
             </a>
@@ -244,14 +295,14 @@
       <section aria-label="Hệ thống dịch vụ và hỗ trợ" class="lg:col-span-6 flex flex-col gap-6">
 
         <!-- Mobile Quick Contact Info Bar -->
-        <div class="sm:hidden flex items-center justify-between bg-white/95 border border-sky-200 p-3 rounded-2xl text-xs shadow-sm">
-          <a href="tel:+84357959888" class="flex items-center gap-2 text-slate-900 font-black">
-            <i class="fa-solid fa-phone text-sky-600"></i>
+        <div class="sm:hidden flex items-center justify-between glass-card p-3 rounded-2xl text-xs shadow-sm">
+          <a href="tel:+84357959888" class="flex items-center gap-2 theme-text-primary font-black">
+            <i class="fa-solid fa-phone theme-text-accent"></i>
             <span>+84 357959888</span>
           </a>
           <span class="text-slate-300">|</span>
-          <a href="mailto:admin@jun88.com" class="flex items-center gap-2 text-slate-900 font-black">
-            <i class="fa-solid fa-envelope text-sky-600"></i>
+          <a href="mailto:admin@jun88.com" class="flex items-center gap-2 theme-text-primary font-black">
+            <i class="fa-solid fa-envelope theme-text-accent"></i>
             <span>admin@jun88.com</span>
           </a>
         </div>
@@ -264,7 +315,7 @@
             <div class="w-12 h-12 rounded-xl bg-sky-100 flex items-center justify-center text-sky-700 group-hover:bg-sky-600 group-hover:text-white group-hover:scale-110 transition duration-300 shadow-inner">
               <i class="fa-solid fa-wallet text-xl"></i>
             </div>
-            <span class="text-xs font-black text-slate-900 text-center tracking-wide">NẠP - RÚT</span>
+            <span class="text-xs font-black theme-text-primary text-center tracking-wide">NẠP - RÚT</span>
           </button>
 
           <!-- Khuyến Mãi -->
@@ -272,7 +323,7 @@
             <div class="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center text-amber-700 group-hover:bg-amber-500 group-hover:text-white group-hover:scale-110 transition duration-300 shadow-inner">
               <i class="fa-solid fa-gift text-xl"></i>
             </div>
-            <span class="text-xs font-black text-slate-900 text-center tracking-wide">KHUYẾN MÃI</span>
+            <span class="text-xs font-black theme-text-primary text-center tracking-wide">KHUYẾN MÃI</span>
           </button>
 
           <!-- Tài Khoản -->
@@ -280,7 +331,7 @@
             <div class="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center text-blue-700 group-hover:bg-blue-600 group-hover:text-white group-hover:scale-110 transition duration-300 shadow-inner">
               <i class="fa-solid fa-user-gear text-xl"></i>
             </div>
-            <span class="text-xs font-black text-slate-900 text-center tracking-wide">TÀI KHOẢN</span>
+            <span class="text-xs font-black theme-text-primary text-center tracking-wide">TÀI KHOẢN</span>
           </button>
 
           <!-- Đổi Thông Tin -->
@@ -288,7 +339,7 @@
             <div class="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-700 group-hover:bg-emerald-600 group-hover:text-white group-hover:scale-110 transition duration-300 shadow-inner">
               <i class="fa-solid fa-id-card text-xl"></i>
             </div>
-            <span class="text-xs font-black text-slate-900 text-center tracking-wide">ĐỔI THÔNG TIN</span>
+            <span class="text-xs font-black theme-text-primary text-center tracking-wide">ĐỔI THÔNG TIN</span>
           </a>
 
           <!-- Telegram -->
@@ -296,7 +347,7 @@
             <div class="w-12 h-12 rounded-xl bg-sky-100 flex items-center justify-center text-sky-600 group-hover:bg-sky-500 group-hover:text-white group-hover:scale-110 transition duration-300 shadow-inner">
               <i class="fa-brands fa-telegram text-xl"></i>
             </div>
-            <span class="text-xs font-black text-slate-900 text-center tracking-wide">TELEGRAM</span>
+            <span class="text-xs font-black theme-text-primary text-center tracking-wide">TELEGRAM</span>
           </a>
 
           <!-- Messenger -->
@@ -304,7 +355,7 @@
             <div class="w-12 h-12 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-700 group-hover:bg-indigo-600 group-hover:text-white group-hover:scale-110 transition duration-300 shadow-inner">
               <i class="fa-brands fa-facebook-messenger text-xl"></i>
             </div>
-            <span class="text-xs font-black text-slate-900 text-center tracking-wide">MESSENGER</span>
+            <span class="text-xs font-black theme-text-primary text-center tracking-wide">MESSENGER</span>
           </a>
 
           <!-- Khiếu Nại -->
@@ -312,7 +363,7 @@
             <div class="w-12 h-12 rounded-xl bg-rose-100 flex items-center justify-center text-rose-700 group-hover:bg-rose-600 group-hover:text-white group-hover:scale-110 transition duration-300 shadow-inner">
               <i class="fa-solid fa-triangle-exclamation text-xl"></i>
             </div>
-            <span class="text-xs font-black text-slate-900 text-center tracking-wide">KHIẾU NẠI</span>
+            <span class="text-xs font-black theme-text-primary text-center tracking-wide">KHIẾU NẠI</span>
           </a>
 
           <!-- Code Livestream -->
@@ -320,73 +371,73 @@
             <div class="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center text-purple-700 group-hover:bg-purple-600 group-hover:text-white group-hover:scale-110 transition duration-300 shadow-inner">
               <i class="fa-solid fa-video text-xl"></i>
             </div>
-            <span class="text-xs font-black text-slate-900 text-center tracking-wide">LIVESTREAM</span>
+            <span class="text-xs font-black theme-text-primary text-center tracking-wide">LIVESTREAM</span>
           </a>
 
         </div>
 
         <!-- Support Platforms Section -->
         <div class="glass-card rounded-2xl p-5">
-          <div class="bg-gradient-to-r from-sky-600 to-blue-700 py-2 px-4 rounded-xl mb-4 text-center shadow-sm">
-            <span class="text-xs font-black tracking-widest text-white uppercase">NỀN TẢNG HỖ TRỢ</span>
+          <div class="theme-section-bar py-2 px-4 rounded-xl mb-4 text-center shadow-sm">
+            <span class="text-xs font-black tracking-widest uppercase">NỀN TẢNG HỖ TRỢ</span>
           </div>
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
             <a href="https://jun8801.com/daily" target="_blank" rel="nofollow" class="bg-sky-50/70 hover:bg-sky-100 border border-sky-200 hover:border-sky-400 p-3 rounded-xl flex flex-col items-center gap-2 transition group shadow-xs">
               <div class="w-10 h-10 rounded-lg bg-sky-100 flex items-center justify-center text-sky-700 group-hover:scale-110 transition">
                 <i class="fa-solid fa-handshake text-lg"></i>
               </div>
-              <span class="text-[11px] font-black text-slate-900">ĐẠI LÝ</span>
+              <span class="text-[11px] font-black theme-text-primary">ĐẠI LÝ</span>
             </a>
             <a href="https://jun8801.com/quatang" target="_blank" rel="nofollow" class="bg-sky-50/70 hover:bg-sky-100 border border-sky-200 hover:border-sky-400 p-3 rounded-xl flex flex-col items-center gap-2 transition group shadow-xs">
               <div class="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center text-amber-700 group-hover:scale-110 transition">
                 <i class="fa-solid fa-box-open text-lg"></i>
               </div>
-              <span class="text-[11px] font-black text-slate-900">VẬT PHẨM</span>
+              <span class="text-[11px] font-black theme-text-primary">VẬT PHẨM</span>
             </a>
             <a href="https://jun8801.com/hom-thu" target="_blank" rel="nofollow" class="bg-sky-50/70 hover:bg-sky-100 border border-sky-200 hover:border-sky-400 p-3 rounded-xl flex flex-col items-center gap-2 transition group shadow-xs">
               <div class="w-10 h-10 rounded-lg bg-emerald-100 flex items-center justify-center text-emerald-700 group-hover:scale-110 transition">
                 <i class="fa-solid fa-inbox text-lg"></i>
               </div>
-              <span class="text-[11px] font-black text-slate-900">THƯ GÓP Ý</span>
+              <span class="text-[11px] font-black theme-text-primary">THƯ GÓP Ý</span>
             </a>
             <a href="https://jun8801.com/huongdan" target="_blank" rel="nofollow" class="bg-sky-50/70 hover:bg-sky-100 border border-sky-200 hover:border-sky-400 p-3 rounded-xl flex flex-col items-center gap-2 transition group shadow-xs">
               <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center text-blue-700 group-hover:scale-110 transition">
                 <i class="fa-solid fa-book text-lg"></i>
               </div>
-              <span class="text-[11px] font-black text-slate-900">CẨM NANG</span>
+              <span class="text-[11px] font-black theme-text-primary">CẨM NANG</span>
             </a>
           </div>
         </div>
 
         <!-- Information Channels Section -->
         <div class="glass-card rounded-2xl p-5">
-          <div class="bg-gradient-to-r from-blue-700 to-cyan-600 py-2 px-4 rounded-xl mb-4 text-center shadow-sm">
-            <span class="text-xs font-black tracking-widest text-white uppercase">KÊNH THÔNG TIN</span>
+          <div class="theme-section-bar py-2 px-4 rounded-xl mb-4 text-center shadow-sm">
+            <span class="text-xs font-black tracking-widest uppercase">KÊNH THÔNG TIN</span>
           </div>
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
             <a href="https://jun8801.com/kenh-su-kien" target="_blank" rel="nofollow" class="bg-sky-50/70 hover:bg-sky-100 border border-sky-200 hover:border-sky-400 p-3 rounded-xl flex flex-col items-center gap-2 transition group shadow-xs">
               <div class="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center text-purple-700 group-hover:scale-110 transition">
                 <i class="fa-solid fa-calendar-days text-lg"></i>
               </div>
-              <span class="text-[11px] font-black text-slate-900">SỰ KIỆN</span>
+              <span class="text-[11px] font-black theme-text-primary">SỰ KIỆN</span>
             </a>
             <a href="https://jun8801.com/facebook" target="_blank" rel="nofollow" class="bg-sky-50/70 hover:bg-sky-100 border border-sky-200 hover:border-sky-400 p-3 rounded-xl flex flex-col items-center gap-2 transition group shadow-xs">
               <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center text-blue-700 group-hover:scale-110 transition">
                 <i class="fa-brands fa-facebook text-lg"></i>
               </div>
-              <span class="text-[11px] font-black text-slate-900">FACEBOOK</span>
+              <span class="text-[11px] font-black theme-text-primary">FACEBOOK</span>
             </a>
             <a href="https://jun8801.com/youtube" target="_blank" rel="nofollow" class="bg-sky-50/70 hover:bg-sky-100 border border-sky-200 hover:border-sky-400 p-3 rounded-xl flex flex-col items-center gap-2 transition group shadow-xs">
               <div class="w-10 h-10 rounded-lg bg-rose-100 flex items-center justify-center text-rose-700 group-hover:scale-110 transition">
                 <i class="fa-brands fa-youtube text-lg"></i>
               </div>
-              <span class="text-[11px] font-black text-slate-900">YOUTUBE</span>
+              <span class="text-[11px] font-black theme-text-primary">YOUTUBE</span>
             </a>
             <a href="https://jun8801.com/vip" target="_blank" rel="nofollow" class="bg-sky-50/70 hover:bg-sky-100 border border-sky-200 hover:border-sky-400 p-3 rounded-xl flex flex-col items-center gap-2 transition group shadow-xs">
               <div class="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center text-amber-700 group-hover:scale-110 transition">
                 <i class="fa-solid fa-crown text-lg"></i>
               </div>
-              <span class="text-[11px] font-black text-slate-900">CLB VIP</span>
+              <span class="text-[11px] font-black theme-text-primary">CLB VIP</span>
             </a>
           </div>
         </div>
@@ -396,7 +447,7 @@
     </div>
 
     <!-- Footer Copyright -->
-    <footer class="mt-12 text-center text-xs font-extrabold text-slate-800 border-t border-sky-300 pt-6">
+    <footer class="mt-12 text-center text-xs font-extrabold theme-text-primary border-t border-sky-300 pt-6">
       <p>&copy; 2026 Jun88 Official Customer Service Center. All rights reserved.</p>
     </footer>
 
